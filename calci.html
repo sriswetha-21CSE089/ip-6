@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table{
+                border:1px solid black;
+                background-color: plum;
+            }
+        </style>
+    </head>
+    <body>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <center>
+        <h1>calculator</h1>
+        <table>
+             <tr><td>enter number1<input type="text" id="t1"></td></tr>
+             <tr><td>enter number2<input type="text" id="t2"></td></tr>
+             <tr><td>Result <input type="text" id="t3"></td></tr>
+             <tr><td><button id="b1">+</button> <button id="b2">-</button> <button id="b3">*</button> <button id="b4">/</button></td></tr>
+        </table>
+    </center>
+    <script>
+      
+       
+        $(document).ready(function(){
+              
+            $("#b1").click(function(){
+                var a=$("#t1").val();
+                 var b=$("#t2").val();
+                 var c=parseInt(a)+parseInt(b);
+                $("#t3").val(c);
+            });
+            $("#b3").click(function(){
+                var a=$("#t1").val();
+                 var b=$("#t2").val();
+                 var c=parseInt(a)*parseInt(b);
+                $("#t3").val(c);
+            });
+            $("#b2").click(function(){
+                var a=$("#t1").val();
+                 var b=$("#t2").val();
+                 var c=parseInt(a)-parseInt(b);
+                $("#t3").val(c);
+            });
+            $("#b4").click(function(){
+                var a=$("#t1").val();
+                 var b=$("#t2").val();
+                 var c=parseInt(a)/parseInt(b);
+                $("#t3").val(c);
+            });
+        });
+    </script>
+    </body>
+</html>
